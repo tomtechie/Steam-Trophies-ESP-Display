@@ -1,4 +1,4 @@
-# Steam-Trophies-ESP-Display
+# Steam-Trophies-ESP-Display (Releasing 2025-10-17)
 
 
 ![IMG_5316](https://github.com/user-attachments/assets/56ce7daa-5c21-4405-b9ac-3e49ced594bb)
