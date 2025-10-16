@@ -1,36 +1,19 @@
 # Steam-Trophies-ESP-Display
 
 
-<img width="4284" height="3213" alt="TrophyMainPic" src="https://github" />
+![IMG_5316](https://github.com/user-attachments/assets/56ce7daa-5c21-4405-b9ac-3e49ced594bb)
 
 
 ## [**3D model files can be found on MakerWorld**](https://makerworld.com/en/@tomtechie) 
 
-### This project shows your Steam stats on a small ESP32-C3 with an SSD1306 OLED display.
-
-There are currently two versions of the project:
+### This project shows your Steam stats on a ESP32-C3 with an SSD1306 OLED display.
 
 
+It runs completely standalone on an ESP32-C3. It fetches your Steam stats — Level, Total Playtime, and Total Games Owned — and displays them on a single OLED screen for quick viewing.
+The ESP32-C3 connects to Wi-Fi and retrieves your Steam data from SteamLadder using HTTPS requests. The screen updates automatically every 10 minutes (configurable).
 
-Home Assistant version → Uses an API and switches between two screens of information.  
-More stable, recommended.
+![IMG_5305](https://github.com/user-attachments/assets/70979f45-9a59-4226-a080-4f39850106c7)
 
-
-
-Arduino IDE version → Runs standalone, shows all info on a single screen.  
-
-
- 
----
- 
-
-
-The Home Assistant version cycles through two clean, minimalistic screens showing your stats.
-<img width="2780" height="908" alt="Untitled-1" src="https://github" />
-
-
-The Arduino IDE version condenses everything into one screen for quick viewing.
-<img width="1468" height="1043" alt="IMG_5114" src="https://github" />
 
 
 
@@ -51,7 +34,7 @@ The Arduino IDE version condenses everything into one screen for quick viewing.
 |------|-------|
 | ESP32-C3 DevKit | Development board with USB-C |
 | SSD1306 OLED 128x64 | I2C display |
-| USB-C cable | For flashing |
+| USB-C cable | For flashing & Power |
 | Computer with Arduino IDE installed | Arduino IDE Programming|
 | Steam account | For data |
 
