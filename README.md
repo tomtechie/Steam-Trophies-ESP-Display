@@ -1,4 +1,4 @@
-# Steam-Trophies-ESP-Display (Releasing 2025-10-17)
+# Steam-Trophies-ESP-Display
 
 
 ![IMG_5316](https://github.com/user-attachments/assets/56ce7daa-5c21-4405-b9ac-3e49ced594bb)
@@ -319,6 +319,12 @@ void loop() {
 
 - Upload the code to your ESP32C3
 - Done
+
+### How do i find my Steam ID?
+
+Go to [**Steamid**](https://steamladder.com) and login with your steam account. 
+Click on profile and you should see your id. 
+
 
 
 ### Having issues?
