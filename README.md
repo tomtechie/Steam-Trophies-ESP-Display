@@ -67,6 +67,11 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 ```
   Then open Tools → Board → Board Manager, search for ESP32, and click Install.
 
+  Also Make sure you have the following libaries installed by going to "Manage Libaries" and searching for them: 
+  - Adafruit GFX Libary
+  - Adafruit SSD1306
+
+-------------------------------------------------------
 
 - Plug your ESP32-C3 into your computer with a USB cable.
 - Then in Arduino IDE, go to Tools → Board and select ESP32C3 Dev Module.
