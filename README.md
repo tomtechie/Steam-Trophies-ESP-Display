@@ -157,7 +157,7 @@ You’ll see the full **Steam Trophy** configuration UI.
 
 ---
 
-## Getting your Steam credentials
+## Step 4: Getting your Steam credentials
 
 * **Steam Web API Key**: create one at your Steam account’s  [developer API page](https://steamcommunity.com/dev/apikey).
 * **SteamID64**: your 64-bit Steam ID (not your vanity name).
@@ -169,7 +169,7 @@ You’ll see the full **Steam Trophy** configuration UI.
 
 ---
 
-## Configuring the display (on-device Web UI)
+## Step 5: Configuring the display (on-device Web UI)
 
 Open the device’s IP in a browser (e.g., `http://192.168.1.42/`).
 
