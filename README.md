@@ -212,6 +212,9 @@ Open the device’s IP in a browser (e.g., `http://192.168.1.42/`).
   * iOS often has Private IP-address activated which causes issues. When you have connected to the `SteamTrophy_Setup` Wi-Fi click on the `i` next to the Wi-Fi → Private Wi-Fi-adress → Off.  
   You should now be able to access `http://192.168.4.1/ui`
 
+* **Most played games not showing**
+  * Due to the limitation of the ESP32-C3 there seems to be a issue with loading Most Played games for some users, this seems to be due to the amount of games. I will look closer at this when i have some time over. 
+
 <br>
 
 ## FAQ
