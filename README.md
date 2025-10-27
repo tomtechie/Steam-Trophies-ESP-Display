@@ -86,11 +86,12 @@ Customize which metrics to show and how they’re arranged.
 | Item | Notes |
 |------|-------|
 | 3D Model | [Download](https://makerworld.com/de/models/1896099-steam-stats-trophy-display#profileId-2031495) |
-| ESP32-C3 DevKit | Development board with USB-C |
-| SSD1306 OLED 128x64 | I2C display |
+| ESP32-C3 DevKit |  [Development board with USB-C](https://amzn.to/4gY8C6z)|
+| SSD1306 OLED 128x64 | [I2C display](https://amzn.to/4mPmWiW) |
 | USB-C cable | For flashing & Power |
 | Steam account / API Key | [For Steam connection](https://steamcommunity.com/dev/apikey) |
 | Latest software version | [Releases](https://github.com/tomtechie/Steam-Trophies-ESP-Display/releases)  |
+
 
 
 ---
@@ -107,6 +108,9 @@ Customize which metrics to show and how they’re arranged.
 |3.3V|→|VCC|
 
 <img width="767" height="546" alt="Schematic" src="https://github.com/user-attachments/assets/d0ffa1a1-ca50-4732-a0c4-b6b2e8f641da" />
+
+Either solder the cables in place, or preferably use female jumper wires that can be easily connected to the pins on each component.
+[**Recommended cables**](https://amzn.to/4qunIVA) 
 
 
 ---
