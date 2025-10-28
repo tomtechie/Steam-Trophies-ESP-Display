@@ -127,6 +127,8 @@ Either solder the cables in place, or preferably use female jumper wires that ca
 > ⚙️ Tip:
 >On certain ESP32-C3 models, flashing requires manual boot activation.
 >Keep BOOT pressed during USB connection and release it once communication with the device is established.
+>
+> If you are seeing multiple "locations" to put the .Bin file on this is most likely due to the ESP32-C3 having a program already installed, To fix this remove all "locations" and then click erase. Once the erase is done you can add the .Bin file. 
 
  
 5. Click on **SELECT**
