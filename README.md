@@ -85,8 +85,8 @@ Customize which metrics to show and how they’re arranged.
 
 | Item | Notes |
 |------|-------|
-| 3D Model | [Download](https://makerworld.com/de/models/1896099-steam-stats-trophy-display#profileId-2031495) |
-| ESP32-C3 DevKit |  [Development board with USB-C](https://amzn.to/4gY8C6z)|
+| 3D Model (new base) | [Download](https://makerworld.com/de/models/1896099-steam-stats-trophy-display#profileId-2031495) - new 3D-printed base supports both C3 and S3 |
+| ESP32-C3 Mini or ESP32-S3 Nano |  [C3](https://a.co/d/07SdfnQ3) and [S3](https://a.co/d/02UtBFj2) are both supported (use matching firmware binary) |
 | SSD1306 OLED 128x64 | [I2C display](https://amzn.to/4mPmWiW) |
 | USB-C cable | For flashing & Power |
 | Steam account / API Key | [For Steam connection](https://steamcommunity.com/dev/apikey) |
@@ -97,17 +97,24 @@ Customize which metrics to show and how they’re arranged.
 ---
 
 
-## Step 1: Wiring the OLED to ESP32-C3
+## Step 1: Wiring the OLED (ESP32-C3 Mini vs ESP32-S3 Nano)
+
+> The new 3D-printed base supports both board versions.
+>
+> Main difference: **ESP32-S3 Nano supports larger game libraries**.
+
+### Side-by-side wiring
+
+| ESP32-C3 Mini | | SSD1306 OLED | | ESP32-S3 Nano || SSD1306 OLED |
+|------|------|------|------|------|------|------|
+| GPIO 8 |→| SDA || D8 |→| SDA |
+| GPIO 9 |→| SCL || D9 |→| SCL |
+| GND |→| GND || GND |→| GND |
+| 3.3V |→| VDD/VCC || 3.3V |→| VDD/VCC |
 
 
-| ESP32-C3  | → | SSD1306 OLED |
-|------|-------|-------|
-|GPIO 8|→|SDA|
-|GPIO 9|→|SCL|
-|GND|→|GND|
-|3.3V|→|VCC|
+<img width="749" height="394" alt="Screenshot 2026-03-05 at 18 55 07" src="https://github.com/user-attachments/assets/83b1d3c5-92ed-4d88-9986-a1e1011e3607" />
 
-<img width="767" height="546" alt="Schematic" src="https://github.com/user-attachments/assets/d0ffa1a1-ca50-4732-a0c4-b6b2e8f641da" />
 
 Either solder the cables in place, or preferably use female jumper wires that can be easily connected to the pins on each component.
 [**Recommended cables**](https://amzn.to/4qunIVA) 
@@ -116,24 +123,41 @@ Either solder the cables in place, or preferably use female jumper wires that ca
 ---
 
 
-## Step 2: Install/Flash ESP
+## Step 2: Install/Flash ESP (separate steps for C3 and S3)
 
 1. Download the latest version of the software: [**Releases**](https://github.com/tomtechie/Steam-Trophies-ESP-Display/releases) 
 2. Go to: https://esptool.spacehuhn.com
-3. Plug in your ESP32-C3 via USB
-4. Click on CONNECT and select the correct port (e.g. COM5)
 
 
-> ⚙️ Tip:
->On certain ESP32-C3 models, flashing requires manual boot activation.
->Keep BOOT pressed during USB connection and release it once communication with the device is established.
+### ESP32-C3 Mini flashing
+
+1. Hold the **BOOT** button while connecting the USB to your computer.
+2. Click **Connect** and choose the ESP32-C3 board.
+3. Release **BOOT** once communication is established.
+4. Click on **SELECT** and choose the **C3** firmware `.bin`.
+5. Make sure the 0x is set to **0**
+6. Click **Program**.
+
+
+
+### ESP32-S3 Nano flashing
+
+1. Connect a cable between **B1** & **GND** in order to set the board to flash-mode.
+> The green cable shows how you should connect the cable between **B1** & **GND**
+<img width="463" height="634" alt="Screenshot 2026-03-05 at 18 58 31" src="https://github.com/user-attachments/assets/56f3f2a4-5584-413b-a2b3-a68f5907462f" />
+
+3. Connect the USB to your computer.
+4. Click **Connect** and choose the ESP32-S3 board.
+5. Click on **SELECT** and choose the **S3** firmware `.bin`.
+6. Make sure the 0x is set to **0**
+7. Click **Program**.
+
+
+
+
+
 >
-> If you are seeing multiple "locations" to put the .Bin file on this is most likely due to the ESP32-C3 having a program already installed, To fix this remove all "locations" and then click erase. Once the erase is done you can add the .Bin file. 
-
- 
-5. Click on **SELECT**
-    → Select your SteamStatsTrophy.bin
-6. Click **Program** and the software will be installed
+> If you are seeing multiple "locations" to put the `.bin` file on, the board likely has an existing program. Remove all locations, click erase, then add your firmware file again.
 ---
 
 ## Step 3: Configuration
@@ -219,7 +243,7 @@ Open the device’s IP in a browser (e.g., `http://192.168.1.42/`).
   You should now be able to access `http://192.168.4.1/ui`
 
 * **Most played games not showing**
-  * Due to the limitation of the ESP32-C3 there seems to be a issue with loading Most Played games for some users, this seems to be due to the amount of games. I will look closer at this when i have some time over. 
+  * Due to the limitation of the ESP32-C3 there seems to be a issue with loading Most Played games for some users, this seems to be due to the amount of games. This is solved with the **ESP32-S3 Version**. 
 
 <br>
 
