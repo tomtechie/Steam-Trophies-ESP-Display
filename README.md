@@ -151,7 +151,7 @@ Either solder the cables in place, or preferably use female jumper wires that ca
 5. Click on **SELECT** and choose the **S3** firmware `.bin`.
 6. Make sure the 0x is set to **0**
 7. Click **Program**.
-
+8. Once done, remove the cable between **B1** & **GND**
 
 
 
